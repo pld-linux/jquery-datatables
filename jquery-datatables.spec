@@ -1,12 +1,12 @@
 %define		plugin	datatables
 Summary:	DataTables (table plug-in for jQuery)
 Name:		jquery-%{plugin}
-Version:	1.9.4
+Version:	1.10.7
 Release:	1
 License:	GPL v2, BSD
 Group:		Applications/WWW
-Source0:	http://www.datatables.net/releases/DataTables-%{version}.zip
-# Source0-md5:	136f9ce380015161a6543cc17221908c
+Source0:	http://datatables.net/releases/DataTables-%{version}.zip
+# Source0-md5:	d910448a806794a389d38678891cd779
 URL:		http://www.datatables.net/
 BuildRequires:	rpmbuild(macros) >= 1.553
 BuildRequires:	sed >= 4.0
@@ -49,5 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Readme.txt
+%doc Readme.md
 %{_appdir}
