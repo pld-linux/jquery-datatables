@@ -50,12 +50,16 @@ install -d $RPM_BUILD_ROOT%{_appdir}
 cp -a i18n $RPM_BUILD_ROOT%{_appdir}
 
 cp -p media/js/jquery.dataTables.min.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.min.js
-cp -p media/js/jquery.dataTables.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.js
-ln -s %{plugin}-%{version}.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}.src.js
+cp -p media/js/jquery.dataTables.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.src.js
+ln -s %{plugin}-%{version}.min.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}.min.js
+ln -s %{plugin}-%{version}.src.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}.src.js
 ln -s %{plugin}-%{version}.min.js $RPM_BUILD_ROOT%{_appdir}/%{plugin}.js
 
-cp -p media/css/jquery.dataTables.css $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.css
-ln -s %{plugin}-%{version}.css $RPM_BUILD_ROOT%{_appdir}/%{plugin}.css
+cp -p media/css/jquery.dataTables.css $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.src.css
+cp -p media/css/jquery.dataTables.min.css $RPM_BUILD_ROOT%{_appdir}/%{plugin}-%{version}.min.css
+ln -s %{plugin}-%{version}.min.css $RPM_BUILD_ROOT%{_appdir}/%{plugin}.src.css
+ln -s %{plugin}-%{version}.min.css $RPM_BUILD_ROOT%{_appdir}/%{plugin}.min.css
+ln -s %{plugin}-%{version}.min.css $RPM_BUILD_ROOT%{_appdir}/%{plugin}.css
 
 cp -a media/images/* $RPM_BUILD_ROOT%{_appdir}
 
